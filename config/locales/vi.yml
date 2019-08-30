@@ -1,4 +1,24 @@
 vi:
-  layuots:
+  page_title: "Ecommerce Web"
+  layouts:
+    header:
+      nav_logo: "Ecommerce"
+      nav_home: "Trang chủ"
+      nav_help: "Trợ giúp"
+    footer:
+      nav_about: "Giới thiệu"
+      nav_contact: "Kết nối"
     application:
-      nameweb: "Ecommerce Web"
+  static_pages:
+    about:
+      title: "Giới thiệu"
+      paragraph: "Giới thiệu"
+    contact:
+      title: "Kết nối"
+      paragraph: "Liên hệ"
+    help:
+      title: "Trợ giúp"
+      paragraph: "Xin chào. Chúng tôi có thể giúp gì cho bạn?"
+    home:
+      title: "Trang chủ"
+      h1_text: "Chào mừng đến Ecommerce Web"
