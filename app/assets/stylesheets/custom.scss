@@ -13,6 +13,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 body {
   padding-top: 60px;
+  margin-top: 30px;
 }
 
 section {
@@ -179,4 +180,12 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+/* Products */
+.product-name {
+  height: 50px;
+}
+.product-price {
+  text-align: right;
 }

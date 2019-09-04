@@ -5,10 +5,24 @@ en:
       nav_logo: "Ecommerce"
       nav_home: "Home"
       nav_help: "Help"
+      en_locale: "English"
+      vi_locale: "Vietnamese"
     footer:
       nav_about: "About"
       nav_contact: "Contact"
     application:
+  products:
+    index:
+      title: "Products"
+    show:
+      quantily_text: "Quantily: %{quantily}"
+      description_text: "Description"
+      picture_text: "Pictures"
+      add_cart_text: "Add to Cart"
+      danger_flash: "Product not exist!"
+  shared:
+    menu:
+      menu_text: "Menu"
   static_pages:
     about:
       title: "About"
@@ -22,3 +36,7 @@ en:
     home:
       title: "Home"
       h1_text: "Welcome to the Ecommerce Web"
+      products_text: "Products"
+  will_paginate:
+    previous_label: "<<"
+    next_label: ">>"

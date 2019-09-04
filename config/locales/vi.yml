@@ -5,10 +5,24 @@ vi:
       nav_logo: "Ecommerce"
       nav_home: "Trang chủ"
       nav_help: "Trợ giúp"
+      en_locale: "Tiếng Anh"
+      vi_locale: "Tiếng Việt"
     footer:
       nav_about: "Giới thiệu"
       nav_contact: "Kết nối"
     application:
+  products:
+    index:
+      title: "Sản phẩm"
+    show:
+      quantily_text: "Số lượng: %{quantily}"
+      description_text: "Thông tin"
+      picture_text: "Hình ảnh"
+      add_cart_text: "Thêm giỏ hàng"
+      danger_flash: "Sản phẩm không tồn tại!"
+  shared:
+    menu:
+      menu_text: "Danh mục"
   static_pages:
     about:
       title: "Giới thiệu"
@@ -22,3 +36,8 @@ vi:
     home:
       title: "Trang chủ"
       h1_text: "Chào mừng đến Ecommerce Web"
+      products_text: "Sản phẩm"
+      menu_text: "Danh mục"
+  will_paginate:
+    previous_label: "<<"
+    next_label: ">>"

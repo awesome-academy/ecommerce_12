@@ -1,0 +1,21 @@
+<div class="product" id="product-<%= product.id %>">
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <%= image_tag(product.product_images[0].picture.url,
+          size: "242x200", alt: product.name) %>
+        <div class="caption">
+          <div class="product-name">
+            <h5>
+              <%= link_to product.name.truncate(Settings.max_product_title),
+                product %>
+            </h5>
+          </div>
+          <div class="product-price">
+            <p><%= number_to_currency product.price, locale: :en %></p>
+          </div>
+          <div class="product-rating">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

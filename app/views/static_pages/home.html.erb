@@ -3,3 +3,20 @@
   <h1><%= t ".h1_text" %></h1>
 </div>
 
+<div class="row">
+  <div class="col-md-3">
+    <%= render "shared/menu" %>
+  </div>
+
+  <div class="col-md-9">
+    <% if @products.any? %>
+      <h1><%= t ".products_text" %></h1>
+
+      <div class="products">
+        <%= render @products %>
+      </div>
+
+      <%= will_paginate @products %>
+    <% end %>
+  </div>
+</div>

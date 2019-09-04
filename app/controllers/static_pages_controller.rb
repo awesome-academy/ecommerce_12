@@ -1,5 +1,8 @@
 class StaticPagesController < ApplicationController
-  def home; end
+  def home
+    @products = Product.sorted.paginate page: params[:page],
+      per_page: Settings.per_page
+  end
 
   def help; end
 
