@@ -5,8 +5,10 @@ Rails.application.routes.draw do
     get "/help", to: "static_pages#help"
     get "/about", to: "static_pages#about"
     get "/contact", to: "static_pages#contact"
+    get "/signup/", to: "users#new"
 
     resources :products, only: :show
     resources :categories, only: :show
+    resources :users, only: [:show, :new, :create]
   end
 end

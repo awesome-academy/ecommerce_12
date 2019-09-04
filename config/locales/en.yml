@@ -11,6 +11,7 @@ en:
       nav_help: "Help"
       en_locale: "English"
       vi_locale: "Vietnamese"
+      nav_signup: "SignUp"
     footer:
       nav_about: "About"
       nav_contact: "Contact"
@@ -27,6 +28,10 @@ en:
   shared:
     menu:
       menu_text: "Menu"
+    error_messages:
+      danger_text:
+        one: "The form contains %{count} error"
+        other: "The form contains %{count} errors"
   static_pages:
     about:
       title: "About"
@@ -41,6 +46,21 @@ en:
       title: "Home"
       h1_text: "Welcome to the Ecommerce Web"
       products_text: "Products"
+  users:
+    show:
+      danger_text: "User not exist!"
+    new:
+      sigup_title: "Sign up"
+      submit_text: "Create my account"
+    create:
+      success_text: "Register successfully!"
   will_paginate:
     previous_label: "<<"
     next_label: ">>"
+  helpers:
+    label:
+      user:
+        username: "Username"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"

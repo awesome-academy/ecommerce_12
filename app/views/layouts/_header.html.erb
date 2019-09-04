@@ -3,14 +3,18 @@
     <%= link_to t(".nav_logo"), root_path, id: t(".logo_text") %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to t(".en_locale"), locale: "en" %>
-        </li>
-        <li>
-          <%= link_to t(".vi_locale"), locale: "vi" %>
-        </li>
+        <% if I18n.locale == :vi %>
+          <li>
+            <%= link_to t(".en_locale"), locale: "en" %>
+          </li>
+        <% elsif I18n.locale == :en %>
+          <li>
+            <%= link_to t(".vi_locale"), locale: "vi" %>
+          </li>
+        <% end %>
         <li><%= link_to t(".nav_home"), root_path %></li>
         <li><%= link_to t(".nav_help"), help_path %></li>
+        <li><%= link_to t(".nav_signup"), signup_path %></li>
       </ul>
     </nav>
   </div>
