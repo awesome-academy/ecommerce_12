@@ -1,35 +1,24 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  layuots:
+  page_title: "Ecommerce Web"
+  layouts:
+    header:
+      nav_logo: "Ecommerce"
+      nav_home: "Home"
+      nav_help: "Help"
+    footer:
+      nav_about: "About"
+      nav_contact: "Contact"
     application:
-      nameweb: "Ecommerce Web"
+  static_pages:
+    about:
+      title: "About"
+      paragraph: "This is about page"
+    contact:
+      title: "Contact"
+      paragraph: "This is contact page"
+    help:
+      title: "Help"
+      paragraph: "Hello. How can we help you?"
+    home:
+      title: "Home"
+      h1_text: "Welcome to the Ecommerce Web"
