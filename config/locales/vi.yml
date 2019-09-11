@@ -1,5 +1,9 @@
 vi:
   page_title: "Ecommerce Web"
+  categories:
+    show:
+      products_text: "Sản phẩm"
+      danger_flash: "Thể loại không tồn tại!"
   layouts:
     header:
       nav_logo: "Ecommerce"
