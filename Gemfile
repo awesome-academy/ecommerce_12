@@ -13,6 +13,7 @@ gem "faker"
 gem "i18n-js"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
+gem "mini_magick"
 gem "mysql2"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.3"
@@ -43,6 +44,7 @@ group :test do
 end
 
 group :production do
+  gem "fog"
   gem "pg"
 end
 

@@ -3,6 +3,12 @@
     <%= link_to t(".nav_logo"), root_path, id: t(".logo_text") %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to t(".en_locale"), locale: "en" %>
+        </li>
+        <li>
+          <%= link_to t(".vi_locale"), locale: "vi" %>
+        </li>
         <li><%= link_to t(".nav_home"), root_path %></li>
         <li><%= link_to t(".nav_help"), help_path %></li>
       </ul>

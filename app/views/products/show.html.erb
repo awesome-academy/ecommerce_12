@@ -1,0 +1,55 @@
+<%= provide :title, @product.name %>
+<div class="row">
+  <div class="col-md-3">
+      <%= render "shared/menu" %>
+  </div>
+
+  <div class="col-md-9">
+    <div class="page-header">
+      <h1><%= @product.name %></h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <%= link_to image_tag(@product.product_images[0].picture.url,
+            size: "484x400", alt: @product.name),
+            @product.product_images[0].picture.url, class: "thumbnail" %>
+      </div>
+
+      <div class="col-md-4">
+          <div class="quantily">
+            <p>
+              <%= t ".quantily_text", quantily: @product.quantily %>
+            </p>
+          </div>
+          <div class="price">
+            <p><%= number_to_currency @product.price, locale: :en %></p>
+          </div>
+        <button type="button" class="btn btn-primary">
+          <%= t ".add_cart_text" %>
+        </button>
+      </div>
+    </div>
+
+    <div class="row panel panel-primary">
+      <div class="panel-heading">
+        <%= t ".description_text" %>
+      </div>
+      <div class="panel-body">
+        <%= @product.description %>
+      </div>
+    </div>
+
+    <div class="row panel panel-primary">
+      <div class="panel-heading">
+        <%= t ".picture_text" %>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <%= link_to image_tag(@product.product_images[0].picture.url,
+            size: "242x200", alt: @product.name),
+            @product.product_images[0].picture.url,
+            class: "thumbnail" %>
+      </div>
+    </div>
+  </div>
+</div>
