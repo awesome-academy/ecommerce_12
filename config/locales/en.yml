@@ -1,5 +1,9 @@
 en:
   page_title: "Ecommerce Web"
+  categories:
+    show:
+      products_text: "Products"
+      danger_flash: "Category not esixt!"
   layouts:
     header:
       nav_logo: "Ecommerce"

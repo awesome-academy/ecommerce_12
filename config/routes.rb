@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     get "/contact", to: "static_pages#contact"
 
     resources :products, only: :show
+    resources :categories, only: :show
   end
 end
