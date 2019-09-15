@@ -29,7 +29,8 @@ vi:
       description_text: "Thông tin"
       picture_text: "Hình ảnh"
       add_cart_text: "Thêm giỏ hàng"
-      danger_flash: "Sản phẩm không tồn tại!"
+      danger_category: "Thể loại không tồn tại!"
+      danger_product: "Sản phẩm không tồn tại!"
   sessions:
     new:
       title: "Đăng nhập"
