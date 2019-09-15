@@ -1,0 +1,57 @@
+<% provide :title, t(".title") %>
+<div class="row">
+  <% if current_carts.present? %>
+    <div class="col-sm-12 col-md-10 col-md-offset-1">
+      <table class="table table-hover">
+        <thead class="panel panel-primary">
+          <tr class="panel panel-primary panel-heading">
+            <th><%= t ".product_th" %></th>
+            <th><%= t ".quantity_th" %></th>
+            <th class="text-center"><%= t ".price_th" %></th>
+            <th class="text-center"><%= t ".total_th" %></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: "product", collection: @products %>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><h3><%= t ".total_text" %></h3></td>
+            <td class="text-right">
+              <h3>
+                <strong><%= number_to_currency @total, locale: :en %></strong>
+              </h3>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>
+              <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <%= link_to t(".continue_link"), root_path %>
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-success">
+                <%= t ".checkout_text" %>
+                <span class="glyphicon glyphicon-play"></span>
+              </button>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <% else %>
+    <div class="col-md-4 col-md-offset-4">
+      <p><%= t ".cart_empty" %></p>
+      <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        <%= link_to t(".continue_link"), root_path %>
+      </button>
+    </div>
+  <% end %>
+</div>
