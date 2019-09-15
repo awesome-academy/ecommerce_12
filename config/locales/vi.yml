@@ -12,6 +12,11 @@ vi:
       en_locale: "Tiếng Anh"
       vi_locale: "Tiếng Việt"
       nav_signup: "Đăng ký"
+      nav_login: "Đăng nhập"
+      nav_profile: "Hồ sơ"
+      nav_settings: "Cài đặt"
+      nav_logout: "Đăng xuất"
+      nav_account: "Tài khoản"
     footer:
       nav_about: "Giới thiệu"
       nav_contact: "Kết nối"
@@ -25,6 +30,15 @@ vi:
       picture_text: "Hình ảnh"
       add_cart_text: "Thêm giỏ hàng"
       danger_flash: "Sản phẩm không tồn tại!"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      submit_text: "Đăng nhập"
+      linkto_signup_html: "Chưa có tài khoản? %{link}"
+      link_signup_text: "Đăng ký ngay!"
+      remember_text: "Ghi nhớ đăng nhập?"
+    create:
+      danger_login: "Email hoặc mật khẩu không hợp lệ!"
   shared:
     menu:
       menu_text: "Danh mục"
@@ -65,3 +79,6 @@ vi:
         email: "Email"
         password: "Mật khẩu"
         password_confirmation: "Nhập lại mật khẩu"
+      session:
+        email: "Email"
+        password: "Mật khẩu"

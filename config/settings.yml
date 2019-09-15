@@ -5,3 +5,4 @@ min_username: 6
 max_email: 255
 max_product_title: 60
 min_password: 6
+remember_session: "1"

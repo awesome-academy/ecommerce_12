@@ -12,6 +12,11 @@ en:
       en_locale: "English"
       vi_locale: "Vietnamese"
       nav_signup: "SignUp"
+      nav_login: "Login"
+      nav_profile: "Profile"
+      nav_settings: "Settings"
+      nav_logout: "Log out"
+      nav_account: "Account"
     footer:
       nav_about: "About"
       nav_contact: "Contact"
@@ -25,6 +30,15 @@ en:
       picture_text: "Pictures"
       add_cart_text: "Add to Cart"
       danger_flash: "Product not exist!"
+  sessions:
+    new:
+      title: "Login"
+      submit_text: "Log in"
+      linkto_signup_html: "New user? %{link}"
+      link_signup_text: "Sign up now!"
+      remember_text: "Remember me on this computer"
+    create:
+      danger_login: "Invalid email/password combination"
   shared:
     menu:
       menu_text: "Menu"
@@ -64,3 +78,6 @@ en:
         email: "Email"
         password: "Password"
         password_confirmation: "Password confirmation"
+      session:
+        email: "Email"
+        password: "Password"
