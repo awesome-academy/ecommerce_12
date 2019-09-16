@@ -11,6 +11,7 @@ vi:
       nav_help: "Trợ giúp"
       en_locale: "Tiếng Anh"
       vi_locale: "Tiếng Việt"
+      nav_signup: "Đăng ký"
     footer:
       nav_about: "Giới thiệu"
       nav_contact: "Kết nối"
@@ -27,6 +28,10 @@ vi:
   shared:
     menu:
       menu_text: "Danh mục"
+    error_messages:
+      danger_text:
+        one: "Có %{count} lỗi"
+        other: "Có %{count} lỗi"
   static_pages:
     about:
       title: "Giới thiệu"
@@ -42,6 +47,21 @@ vi:
       h1_text: "Chào mừng đến Ecommerce Web"
       products_text: "Sản phẩm"
       menu_text: "Danh mục"
+  users:
+    show:
+      danger_text: "Toàn khoản không tồn tại!"
+    new:
+      sigup_title: "Đăng ký"
+      submit_text: "Tạo tài khoản"
+    create:
+      success_text: "Đăng ký tài khoản thành công!"
   will_paginate:
     previous_label: "<<"
     next_label: ">>"
+  helpers:
+    label:
+      user:
+        username: "Tên tài khoản"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Nhập lại mật khẩu"

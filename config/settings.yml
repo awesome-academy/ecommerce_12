@@ -1,5 +1,7 @@
 per_page: 16
 max_product_name: 100
 max_username: 50
+min_username: 6
 max_email: 255
 max_product_title: 60
+min_password: 6
