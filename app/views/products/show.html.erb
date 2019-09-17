@@ -44,11 +44,8 @@
       <div class="panel-heading">
         <%= t ".picture_text" %>
       </div>
-      <div class="col-xs-6 col-md-3">
-        <%= link_to image_tag(@product.product_images[0].picture.url,
-            size: "242x200", alt: @product.name),
-            @product.product_images[0].picture.url,
-            class: "thumbnail" %>
+      <div class="panel-body">
+        <%= render @product.product_images %>
       </div>
     </div>
   </div>

@@ -29,7 +29,8 @@ en:
       description_text: "Description"
       picture_text: "Pictures"
       add_cart_text: "Add to Cart"
-      danger_flash: "Product not exist!"
+      danger_category: "Category not exist!"
+      danger_product: "Product not exist!"
   sessions:
     new:
       title: "Login"

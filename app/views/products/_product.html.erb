@@ -7,7 +7,9 @@
           <div class="product-name">
             <h5>
               <%= link_to product.name.truncate(Settings.max_product_title),
-                product %>
+                category_product_path(
+                category_id: product.category_id,
+                id: product.id) %>
             </h5>
           </div>
           <div class="product-price">
