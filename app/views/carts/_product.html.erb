@@ -16,19 +16,21 @@
     </div>
   </td>
   <td class="col-sm-1 col-md-1" style="text-align: center">
-    <%= content_tag :input, "", class: "form-control",
-      type: "number", value: current_carts["#{product.id}"] %>
+    <%= form_with url: cart_path(id: product.id), method: :put, local: true do |f| %>
+      <%= f.number_field :quantily, value: current_carts["#{product.id}"],
+        max: product.quantily, min: Settings.min_quantily, class: "form-control" %>
   </td>
   <td class="col-sm-1 col-md-1 text-center">
     <strong><%= number_to_currency product.price, locale: :en %></strong>
   </td>
   <td class="col-sm-1 col-md-1 text-center">
-    <strong><%= price current_carts["#{product.id}"], product.price %></strong>
+    <strong><%= total_price_product product.id %></strong>
   </td>
   <td class="col-sm-1 col-md-1">
-    <button type="button" class="btn btn-info">
-      <span class="glyphicon glyphicon-refresh"></span>
-    </button>
+      <%= f.button type: :submit, class: "btn btn-info" do %>
+        <% content_tag(:span, nil, class: "glyphicon glyphicon-refresh") %>
+      <% end %>
+    <% end %>
     <p></p>
       <%= link_to cart_path(id: product.id), method: :delete,
         data: {confirm: t(".confirm_delete")} do %>

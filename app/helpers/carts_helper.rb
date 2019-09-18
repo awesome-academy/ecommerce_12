@@ -3,14 +3,21 @@ module CartsHelper
     quantity * price
   end
 
-  def total_price carts, products
+  def total_price
+    products = Product.by_ids current_carts.keys
     products.reduce(0) do |total, product|
-      total + product.price * carts[product.id.to_s]
+      total + product.price * @carts[product.id.to_s].to_i
     end
   end
 
-  def price quantily, price
-    number_to_currency (quantily.to_i * price), locale: :en
+  def total_price_product id
+    if product = Product.find_by(id: id)
+      number_to_currency (current_carts[id.to_s].to_i * product.price),
+        locale: :en
+    else
+      flash[:danger] = I18n.t ".carts.danger_product"
+      redirect_to carts_path
+    end
   end
 
   def count_carts

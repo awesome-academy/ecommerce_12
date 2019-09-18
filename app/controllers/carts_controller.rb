@@ -1,20 +1,33 @@
 class CartsController < ApplicationController
-  before_action :current_carts, only: [:index, :create, :destroy]
+  before_action :current_carts, except: [:show, :new, :edit]
+  before_action :load_product, only: [:create, :update]
+  before_action :load_products, only: :index
 
-  def index
-    @products = Product.by_ids @carts.keys
-    @total = total_price @carts, @products
-  end
+  def index; end
 
   def create
-    @product = Product.find_by id: params[:product_id]
-    if @product
-      quantily = params[:quantily].to_i
-      check_quantily @product, quantily
+    if check_quantily
+      add_item @product, @quantily
     else
-      flash[:danger] = t ".danger_product"
-      redirect_to root_path
+      flash[:danger] = t ".danger_quantily"
     end
+    redirect_to category_product_path(category_id: @product.category_id,
+      id: @product.id)
+  end
+
+  def update
+    if @carts.key? params[:id]
+      if check_quantily
+        @carts[params[:id]] = @quantily
+        session[:carts] = @carts
+        flash[:success] = t ".success_update"
+      else
+        flash[:danger] = t ".danger_quantily"
+      end
+    else
+      flash[:danger] = t ".danger_update"
+    end
+    redirect_to carts_path
   end
 
   def destroy
@@ -30,19 +43,24 @@ class CartsController < ApplicationController
 
   private
 
-  def check_quantily product, quantily
-    max = product.quantily
-    if quantily <= max && quantily >= Settings.min_quantily
-      add_item product, quantily
-    else
-      flash[:danger] = t ".danger_quantily"
-    end
-    redirect_to category_product_path(category_id: @product.category_id,
-      id: @product.id)
+  def load_products
+    @products = Product.by_ids @carts.keys
+  end
+
+  def load_product
+    @product = Product.find_by id: params[:id]
+    return if @product
+    flash[:danger] = t ".danger_product"
+    redirect_to carts_path
+  end
+
+  def check_quantily
+    @quantily = params[:quantily].to_i
+    @quantily <= @product.quantily && @quantily >= Settings.min_quantily
   end
 
   def add_item product, quantily
-    if @carts.include? product.id.to_s
+    if @carts.key? product.id.to_s
       flash[:info] = t ".info_product"
     else
       @carts[product.id.to_s] = quantily

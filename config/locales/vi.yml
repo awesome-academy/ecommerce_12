@@ -11,13 +11,15 @@ vi:
       continue_link: "Tiếp tục mua sắm"
       checkout_text: "Thanh toán"
       cart_empty: "Giỏ hàng đang trống!"
-    create:
-      danger_product: "Sản phẩm không tồn tại!"
+    update:
+      success_update: "Cập nhật thành công!"
+      danger_update: "Cập nhật không thành công! Sản phẩm không có trong giỏ hàng."
     destroy:
       success_delete: "Xóa thành công!"
       danger_delete: "Xóa không thành công. Sản phẩm không có trong giỏ hàng!"
     product:
       confirm_delete: "Bạn có muốn xóa sản phẩm?"
+    danger_product: "Sản phẩm không tồn tại!"
     danger_quantily: "Thêm vào giỏ hàng không thành công. Số lượng không hợp lệ!"
     info_product: "Sản phẩm đã tồn tại trong giỏ hàng!"
     success_add: "Thêm vào giỏ hàng thành công!"
