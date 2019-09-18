@@ -6,3 +6,5 @@ max_email: 255
 max_product_title: 60
 min_password: 6
 remember_session: "1"
+default_quantily: 1
+min_quantily: 1

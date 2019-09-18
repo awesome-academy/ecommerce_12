@@ -1,5 +1,21 @@
 en:
   page_title: "Ecommerce Web"
+  carts:
+    index:
+      title: "Carts"
+      product_th: "Product"
+      quantity_th: "Quantity"
+      price_th: "Price"
+      total_th: "Total"
+      total_text: "Total"
+      continue_link: "Continue Shopping"
+      checkout_text: "Checkout"
+      cart_empty: "Cart is empty!"
+    create:
+      danger_product: "Product not exist!"
+    danger_quantily: "Add to cart failed. The quantity is not valid!"
+    info_product: "Product already exists in the cart!"
+    success_add: "Add to cart successfully!"
   categories:
     show:
       products_text: "Products"
@@ -31,6 +47,9 @@ en:
       add_cart_text: "Add to Cart"
       danger_category: "Category not exist!"
       danger_product: "Product not exist!"
+      price_text: "Price:"
+    add_cart_form:
+      add_cart_text: "Add to Cart"
   sessions:
     new:
       title: "Login"

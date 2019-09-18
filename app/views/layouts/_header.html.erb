@@ -35,6 +35,13 @@
           <li><%= link_to t(".nav_signup"), signup_path %></li>
           <li><%= link_to t(".nav_login"), login_path %></li>
         <% end %>
+        <li>
+          <%= link_to carts_path do %>
+            <%= content_tag :span, class: "glyphicon glyphicon-shopping-cart" do %>
+              <%= content_tag :span, count_carts, class: "badge" %>
+            <% end %>
+          <% end %>
+        </li>
       </ul>
     </nav>
   </div>

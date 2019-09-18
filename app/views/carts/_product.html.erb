@@ -1,0 +1,39 @@
+<tr>
+  <td class="col-sm-8 col-md-6">
+    <div class="media">
+      <%= link_to image_tag(product.product_images[0].picture.url,
+        size: "100x100", alt: product.name, class: "media-object"),
+        product.product_images[0].picture.url, class: "thumbnail pull-left" %>
+      <div class="media-body">
+        <h4 class="media-heading">
+          <%= link_to product.name, category_product_path(
+            category_id: product.category_id, id: product.id) %>
+        </h4>
+        <h5 class="media-heading">
+            <strong><%= link_to product.category.name, product.category %></strong>
+        </h5>
+      </div>
+    </div>
+  </td>
+  <td class="col-sm-1 col-md-1" style="text-align: center">
+    <%= content_tag :input, "", class: "form-control",
+      type: "number", value: current_carts["#{product.id}"] %>
+  </td>
+  <td class="col-sm-1 col-md-1 text-center">
+    <strong><%= number_to_currency product.price, locale: :en %></strong>
+  </td>
+  <td class="col-sm-1 col-md-1 text-center">
+    <strong><%= price current_carts["#{product.id}"], product.price %></strong>
+  </td>
+  <td class="col-sm-1 col-md-1">
+    <button type="button" class="btn btn-info">
+      <span class="glyphicon glyphicon-refresh"></span>
+    </button>
+    <p></p>
+    <button type="button" class="btn btn-danger">
+      <%= link_to carts_path, method: :delete do %>
+        <span class="glyphicon glyphicon-remove"></span>
+      <% end %>
+    </button>
+  </td>
+</tr>

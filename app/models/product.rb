@@ -13,4 +13,5 @@ class Product < ApplicationRecord
   validates :quantily, presence: true
 
   scope :sorted, ->{order created_at: :desc}
+  scope :by_ids, ->(ids){where id: ids}
 end

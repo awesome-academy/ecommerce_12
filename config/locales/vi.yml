@@ -1,5 +1,21 @@
 vi:
   page_title: "Ecommerce Web"
+  carts:
+    index:
+      title: "Giỏ hàng"
+      product_th: "Sản phẩm"
+      quantity_th: "Số lượng"
+      price_th: "Giá"
+      total_th: "Số tiền"
+      total_text: "Tổng tiền"
+      continue_link: "Tiếp tục mua sắm"
+      checkout_text: "Thanh toán"
+      cart_empty: "Giỏ hàng đang trống!"
+    create:
+      danger_product: "Sản phẩm không tồn tại!"
+    danger_quantily: "Thêm vào giỏ hàng không thành công. Số lượng không hợp lệ!"
+    info_product: "Sản phẩm đã tồn tại trong giỏ hàng!"
+    success_add: "Thêm vào giỏ hàng thành công!"
   categories:
     show:
       products_text: "Sản phẩm"
@@ -31,6 +47,9 @@ vi:
       add_cart_text: "Thêm giỏ hàng"
       danger_category: "Thể loại không tồn tại!"
       danger_product: "Sản phẩm không tồn tại!"
+      price_text: "Giá:"
+    add_cart_form:
+      add_cart_text: "Thêm giỏ hàng"
   sessions:
     new:
       title: "Đăng nhập"
