@@ -35,6 +35,7 @@ vi:
       vi_locale: "Tiếng Việt"
       nav_signup: "Đăng ký"
       nav_login: "Đăng nhập"
+      nav_orders: "Đơn hàng"
       nav_profile: "Hồ sơ"
       nav_settings: "Cài đặt"
       nav_logout: "Đăng xuất"
@@ -44,6 +45,17 @@ vi:
       nav_contact: "Kết nối"
     application:
   orders:
+    order:
+      detail_textlink: "Chi tiết"
+      order_html: "Đơn hàng: %{link} %{link1}"
+      title_all_product: "Các sản phẩm:"
+      order_date: "Ngày đặt hàng: %{day}"
+    index:
+      title: "Đơn hàng"
+      title_pending: "Đang chờ xử lý"
+      title_shipped: "Đã giao hàng"
+      title_cancelled: "Đã hủy đơn"
+      empty_orders: "Đơn hàng trống"
     new:
       title: "Thanh toán"
       form_title: "Thông tin"

@@ -1,6 +1,10 @@
 class OrdersController < ApplicationController
-  before_action :check_login, :check_carts
+  before_action :check_login
+  before_action :check_carts, only: [:new, :create]
   before_action :current_carts, only: :create
+  before_action :load_orders, only: :index
+
+  def index; end
 
   def new
     @order = current_user.orders.build
@@ -27,6 +31,16 @@ class OrdersController < ApplicationController
   end
 
   private
+
+  def load_orders
+    @orders = current_user.orders.newest
+    @pending_orders = @orders.pending.paginate page: params[:page],
+      per_page: Settings.per_page_orders
+    @shipped_orders = @orders.shipped.paginate page: params[:page],
+      per_page: Settings.per_page_orders
+    @cancelled_orders = @orders.cancelled.paginate page: params[:page],
+      per_page: Settings.per_page_orders
+  end
 
   def order_params
     params.require(:order).permit :customer_name, :address, :phone
