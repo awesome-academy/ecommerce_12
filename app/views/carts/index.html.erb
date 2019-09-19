@@ -35,10 +35,12 @@
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-success">
-                <%= t ".checkout_text" %>
-                <span class="glyphicon glyphicon-play"></span>
-              </button>
+              <%= link_to new_order_path do %>
+                <button type="button" class="btn btn-success">
+                  <%= t ".checkout_text" %>
+                  <span class="glyphicon glyphicon-play"></span>
+                </button>
+              <% end %>
             </td>
             <td></td>
           </tr>

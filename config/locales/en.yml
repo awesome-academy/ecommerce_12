@@ -21,6 +21,7 @@ en:
     danger_quantily: "Add to cart failed. The quantity is not valid!"
     info_product: "Product already exists in the cart!"
     success_add: "Add to cart successfully!"
+    carts_empty: "Cart is empty!"
   categories:
     show:
       products_text: "Products"
@@ -42,6 +43,15 @@ en:
       nav_about: "About"
       nav_contact: "Contact"
     application:
+  orders:
+    new:
+      title: "Checkout"
+      form_title: "Information"
+      submit_text: "Checkout"
+    create:
+      success_checkout: "Checkout successfully!"
+      danger_checkout: "Checkout failed!"
+    login: "Please Login!"
   products:
     index:
       title: "Products"
@@ -64,6 +74,7 @@ en:
       remember_text: "Remember me on this computer"
     create:
       danger_login: "Invalid email/password combination"
+    danger_login: "Please Login!"
   shared:
     menu:
       menu_text: "Menu"
@@ -106,3 +117,7 @@ en:
       session:
         email: "Email"
         password: "Password"
+      order:
+        customer_name: "Customer Name"
+        address: "Address"
+        phone: "Phone Number"

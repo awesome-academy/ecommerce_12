@@ -25,6 +25,25 @@ module CartsHelper
 
   def current_carts
     session[:carts] ||= {}
+    clean_carts
     @carts = session[:carts]
+  end
+
+  def check_carts
+    return if current_carts.present?
+    flash[:danger] = I18n.t ".carts.carts_empty"
+    redirect_to carts_path
+  end
+
+  def clear_carts
+    session.delete :carts
+  end
+
+  def clean_carts
+    if session[:carts].present?
+      session[:carts].each do |key, value|
+        session[:carts].delete key unless Product.find_by id: key
+      end
+    end
   end
 end

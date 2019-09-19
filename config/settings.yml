@@ -8,3 +8,9 @@ min_password: 6
 remember_session: "1"
 default_quantily: 1
 min_quantily: 1
+min_customer_name: 10
+max_customer_name: 100
+min_address: 10
+max_address: 255
+min_phone: 10
+max_phone: 15
