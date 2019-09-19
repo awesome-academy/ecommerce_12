@@ -30,10 +30,11 @@
       <span class="glyphicon glyphicon-refresh"></span>
     </button>
     <p></p>
-    <button type="button" class="btn btn-danger">
-      <%= link_to carts_path, method: :delete do %>
-        <span class="glyphicon glyphicon-remove"></span>
+      <%= link_to cart_path(id: product.id), method: :delete,
+        data: {confirm: t(".confirm_delete")} do %>
+        <button type="button" class="btn btn-danger">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
       <% end %>
-    </button>
   </td>
 </tr>

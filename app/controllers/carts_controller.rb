@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :current_carts, only: [:index, :create]
+  before_action :current_carts, only: [:index, :create, :destroy]
 
   def index
     @products = Product.by_ids @carts.keys
@@ -15,6 +15,17 @@ class CartsController < ApplicationController
       flash[:danger] = t ".danger_product"
       redirect_to root_path
     end
+  end
+
+  def destroy
+    if @carts.key? params[:id]
+      @carts.delete params[:id]
+      flash[:success] = t ".success_delete"
+      session[:carts] = @carts
+    else
+      flash[:danger] = t ".danger_delete"
+    end
+    redirect_to carts_path
   end
 
   private
