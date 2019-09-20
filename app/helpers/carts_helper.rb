@@ -40,10 +40,9 @@ module CartsHelper
   end
 
   def clean_carts
-    if session[:carts].present?
-      session[:carts].each do |key, value|
-        session[:carts].delete key unless Product.find_by id: key
-      end
+    return unless session[:carts].present?
+    session[:carts].each do |key, _value|
+      session[:carts].delete key unless Product.find_by id: key
     end
   end
 end

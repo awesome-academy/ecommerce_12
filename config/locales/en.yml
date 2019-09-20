@@ -35,6 +35,7 @@ en:
       vi_locale: "Vietnamese"
       nav_signup: "SignUp"
       nav_login: "Login"
+      nav_orders: "Orders"
       nav_profile: "Profile"
       nav_settings: "Settings"
       nav_logout: "Log out"
@@ -44,6 +45,17 @@ en:
       nav_contact: "Contact"
     application:
   orders:
+    order:
+      detail_textlink: "Detail"
+      order_html: "Order: %{link} %{link1}"
+      title_all_product: "Products:"
+      order_date: "Order date: %{day}"
+    index:
+      title: "Orders"
+      title_pending: "Pending"
+      title_shipped: "Shipped"
+      title_cancelled: "Cancelled"
+      empty_orders: "Empty order!"
     new:
       title: "Checkout"
       form_title: "Information"

@@ -1,0 +1,48 @@
+<% provide :title, t(".title") %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <p><%= t ".title_pending" %></p>
+      </div>
+      <div class="panel-body">
+        <% if @pending_orders.exists? %>
+          <%= render @pending_orders %>
+          <%= will_paginate @pending_orders %>
+        <% else %>
+          <p><%= t ".empty_orders" %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <p><%= t ".title_shipped" %></p>
+      </div>
+      <div class="panel-body">
+        <% if @shipped_orders.exists? %>
+          <%= render @shipped_orders %>
+          <%= will_paginate @shipped_orders %>
+        <% else %>
+          <p><%= t ".empty_orders" %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <p><%= t ".title_cancelled" %></p>
+      </div>
+      <div class="panel-body">
+        <% if @cancelled_orders.exists? %>
+          <%= render @cancelled_orders %>
+          <%= will_paginate @cancelled_orders %>
+        <% else %>
+          <p><%= t ".empty_orders" %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

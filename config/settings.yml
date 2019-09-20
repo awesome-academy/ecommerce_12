@@ -1,4 +1,5 @@
 per_page: 16
+per_page_orders: 5
 max_product_name: 100
 max_username: 50
 min_username: 6

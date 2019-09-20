@@ -14,4 +14,6 @@ class Order < ApplicationRecord
     length: {minimum: Settings.min_phone,
              maximum: Settings.max_phone},
     format: {with: /\A\d+\z/}
+
+  scope :newest, ->{order created_at: :desc}
 end

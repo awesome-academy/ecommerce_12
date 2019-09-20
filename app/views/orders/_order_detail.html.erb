@@ -1,0 +1,5 @@
+<li>
+  <%= link_to order_detail.product.name,
+    category_product_path(category_id: order_detail.product.category_id,
+    id: order_detail.product.id) %>
+</li>
