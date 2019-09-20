@@ -42,4 +42,10 @@ module SessionsHelper
     session.delete :user_id
     @current_user = nil
   end
+
+  def check_login
+    return if logged_in?
+    flash[:danger] = I18n.t ".sessions.danger_login"
+    redirect_to :login
+  end
 end

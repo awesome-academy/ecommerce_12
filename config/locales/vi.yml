@@ -21,6 +21,7 @@ vi:
     danger_quantily: "Thêm vào giỏ hàng không thành công. Số lượng không hợp lệ!"
     info_product: "Sản phẩm đã tồn tại trong giỏ hàng!"
     success_add: "Thêm vào giỏ hàng thành công!"
+    carts_empty: "Giỏ hàng đang trống!"
   categories:
     show:
       products_text: "Sản phẩm"
@@ -42,6 +43,14 @@ vi:
       nav_about: "Giới thiệu"
       nav_contact: "Kết nối"
     application:
+  orders:
+    new:
+      title: "Thanh toán"
+      form_title: "Thông tin"
+      submit_text: "Thanh toán"
+    create:
+      success_checkout: "Thanh toán thành công!"
+      danger_checkout: "Thanh toán xảy ra lỗi!"
   products:
     index:
       title: "Sản phẩm"
@@ -64,6 +73,7 @@ vi:
       remember_text: "Ghi nhớ đăng nhập?"
     create:
       danger_login: "Email hoặc mật khẩu không hợp lệ!"
+    danger_login: "Vui lòng đăng nhập!"
   shared:
     menu:
       menu_text: "Danh mục"
@@ -107,3 +117,7 @@ vi:
       session:
         email: "Email"
         password: "Mật khẩu"
+      order:
+        customer_name: "Tên khách hàng"
+        address: "Địa chỉ"
+        phone: "Số điện thoại"

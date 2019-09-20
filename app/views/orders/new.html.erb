@@ -1,0 +1,27 @@
+<% provide :title, t(".title") %>
+<%= @order_items %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <p><%= t ".form_title" %></p>
+      </div>
+      <div class="panel-body">
+        <%= form_for @order do |f| %>
+          <%= render "shared/error_messages", object: f.object %>
+
+          <%= f.label :customer_name %>
+          <%= f.text_field :customer_name, class: "form-control" %>
+
+          <%= f.label :address %>
+          <%= f.text_field :address, class: "form-control" %>
+
+          <%= f.label :phone %>
+          <%= f.text_field :phone, class: "form-control" %>
+
+          <%= f.submit t(".submit_text"),class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
