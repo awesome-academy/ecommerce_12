@@ -1,0 +1,26 @@
+<tr>
+  <td class="col-sm-8 col-md-6">
+    <div class="media">
+      <%= link_to image_tag(order_product.product.product_images[0].picture.url,
+        size: "100x100", alt: order_product.product.name, class: "media-object"),
+        order_product.product.product_images[0].picture.url, class: "thumbnail pull-left" %>
+      <div class="media-body">
+        <h4 class="media-heading">
+          <%= link_to order_product.product.name, category_product_path(
+            category_id: order_product.product.category_id, id: order_product.product.id) %>
+        </h4>
+        <h5 class="media-heading">
+            <strong>
+              <%= link_to order_product.product.category.name, order_product.product.category %>
+            </strong>
+        </h5>
+      </div>
+    </div>
+  </td>
+  <td class="col-sm-1 col-md-1" style="text-align: center">
+       <strong><%= order_product.quantily %></strong>
+  </td>
+  <td class="col-sm-1 col-md-1 text-center">
+    <strong><%= number_to_currency order_product.price, locale: :en %></strong>
+  </td>
+</tr>

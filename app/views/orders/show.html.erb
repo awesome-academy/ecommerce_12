@@ -1,0 +1,66 @@
+<% provide :title, t(".title") %>
+<div class="row">
+    <div class="col-sm-12 col-md-8 col-md-offset-2">
+      <table class="table table-hover">
+        <thead class="panel panel-primary">
+          <tr class="panel panel-primary panel-heading">
+            <th><%= t ".product_th" %></th>
+            <th class="text-center"><%= t ".quantity_th" %></th>
+            <th class="text-center"><%= t ".price_th" %></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <%= render partial: "order_product", collection: @order.order_details %>
+          <tr>
+            <td>
+              <% if @order.pending? %>
+                <h3 style="color: #269abc; font-weight: bold">
+                  <%= t ".title_pending" %>
+                </h3>
+              <% elsif @order.shipped? %>
+                <h3 style="color: #398439; font-weight: bold">
+                  <%= t ".title_shipped" %>
+                </h3>
+              <% elsif @order.cancelled? %>
+                <h3 style="color: #d43f3a; font-weight: bold">
+                  <%= t ".title_cancelled" %>
+                </h3>
+              <% end %>
+            </td>
+            <td><h3><%= t ".total_text" %></h3></td>
+            <td class="text-right">
+              <h3>
+                <strong>
+                  <%= number_to_currency total_price_order(@order.order_details), locale: :en %>
+                </strong>
+              </h3>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <%= link_to orders_path do %>
+                <button type="button" class="btn btn-default">
+                  <span class="glyphicon glyphicon-shopping-cart"></span>
+                  <%= t(".orders_textlink") %>
+                </button>
+              <% end %>
+            </td>
+            <td>
+              <% if @order.pending? %>
+                <%= link_to order_path(@order.id), method: :delete,
+                  data: {confirm: t(".confirm_cancel")} do %>
+                  <button type="button" class="btn btn-danger">
+                    <%= t ".btn_cancel" %>
+                    <span class="glyphicon glyphicon-remove"></span>
+                  </button>
+                <% end %>
+              <% end %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+

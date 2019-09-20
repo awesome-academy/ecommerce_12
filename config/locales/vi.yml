@@ -54,8 +54,20 @@ vi:
       title: "Đơn hàng"
       title_pending: "Đang chờ xử lý"
       title_shipped: "Đã giao hàng"
-      title_cancelled: "Đã hủy đơn"
+      title_cancelled: "Đơn đã hủy"
       empty_orders: "Đơn hàng trống"
+    show:
+      title: "Chi tiết đơn hàng"
+      product_th: "Sản phẩm"
+      quantity_th: "Số lượng"
+      price_th: "Giá"
+      total_text: "Tổng tiền"
+      orders_textlink: "Đơn hàng"
+      title_pending: "Đang chờ xử lý"
+      title_shipped: "Đã giao hàng"
+      title_cancelled: "Đơn đã hủy"
+      btn_cancel: "Hủy đơn"
+      confirm_cancel: "Bạn có chắc muốn hủy đơn?"
     new:
       title: "Thanh toán"
       form_title: "Thông tin"
@@ -63,6 +75,11 @@ vi:
     create:
       success_checkout: "Thanh toán thành công!"
       danger_checkout: "Thanh toán xảy ra lỗi!"
+    destroy:
+      success_cancel: "Đơn hàng đã được hủy!"
+      danger_cancel: "Đơn hàng không thể hủy!"
+      danger_destroy: "Hủy lỗi!"
+    danger_order: Không tìm thấy đơn hàng!"
   products:
     index:
       title: "Sản phẩm"

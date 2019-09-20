@@ -56,6 +56,18 @@ en:
       title_shipped: "Shipped"
       title_cancelled: "Cancelled"
       empty_orders: "Empty order!"
+    show:
+      title: "Order detail"
+      product_th: "Products"
+      quantity_th: "Quantily"
+      price_th: "Price"
+      total_text: "Total"
+      orders_textlink: "Orders"
+      title_pending: "Pending"
+      title_shipped: "Shipped"
+      title_cancelled: "Cancelled"
+      btn_cancel: "Cancel"
+      confirm_cancel: "Are you sure?"
     new:
       title: "Checkout"
       form_title: "Information"
@@ -63,7 +75,11 @@ en:
     create:
       success_checkout: "Checkout successfully!"
       danger_checkout: "Checkout failed!"
-    login: "Please Login!"
+    destroy:
+      success_cancel: "Order cancelled!"
+      danger_cancel: "Orders cannot cancel!"
+      danger_destroy: "Cancel failed!"
+    danger_order: "No order found!"
   products:
     index:
       title: "Products"
