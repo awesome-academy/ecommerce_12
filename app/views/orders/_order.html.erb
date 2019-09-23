@@ -3,8 +3,8 @@
     <div class="panel-heading title-order">
       <p>
         <%= t ".order_html",
-          link: link_to(order.id, ""),
-          link1: link_to(t(".detail_textlink"), "") %>
+          link: link_to(order.id, order),
+          link1: link_to(t(".detail_textlink"), order) %>
       </p>
       <p><%= t ".order_date", day: order.created_at %></p>
     </div>
