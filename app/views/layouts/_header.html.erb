@@ -39,7 +39,7 @@
         <li>
           <%= link_to carts_path do %>
             <%= content_tag :span, class: "glyphicon glyphicon-shopping-cart" do %>
-              <%= content_tag :span, count_carts, class: "badge" %>
+              <%= content_tag :span, count_carts, id: "cart_qty", class: "badge" %>
             <% end %>
           <% end %>
         </li>

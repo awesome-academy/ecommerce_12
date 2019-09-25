@@ -11,13 +11,15 @@ en:
       continue_link: "Continue Shopping"
       checkout_text: "Checkout"
       cart_empty: "Cart is empty!"
-    create:
-      danger_product: "Product not exist!"
+    update:
+      success_update: "Update successful!"
+      danger_update: "Update failed! The product is not in the cart."
     destroy:
       success_delete: "Delete successful!"
       danger_delete: "Delete failed. The product is not in the cart!"
     product:
       confirm_delete: "Are you sure?"
+    danger_product: "Product not exist!"
     danger_quantily: "Add to cart failed. The quantity is not valid!"
     info_product: "Product already exists in the cart!"
     success_add: "Add to cart successfully!"

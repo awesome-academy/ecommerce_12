@@ -1,5 +1,6 @@
 <% provide :title, t(".title") %>
-<div class="row">
+<div id="content" class="row">
+  <div id="notification"></div>
   <% if current_carts.present? %>
     <div class="col-sm-12 col-md-10 col-md-offset-1">
       <table class="table table-hover">
@@ -20,7 +21,7 @@
             <td><h3><%= t ".total_text" %></h3></td>
             <td class="text-right">
               <h3>
-                <strong><%= number_to_currency @total, locale: :en %></strong>
+                <strong id="total-price"><%= number_to_currency total_price, locale: :en %></strong>
               </h3>
             </td>
             <td></td>
