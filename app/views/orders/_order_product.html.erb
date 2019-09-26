@@ -17,10 +17,33 @@
       </div>
     </div>
   </td>
-  <td class="col-sm-1 col-md-1" style="text-align: center">
-       <strong><%= order_product.quantily %></strong>
-  </td>
-  <td class="col-sm-1 col-md-1 text-center">
-    <strong><%= number_to_currency order_product.price, locale: :en %></strong>
-  </td>
+  <% if order_product.order.pending? %>
+    <td>
+      <%= form_with url: order_detail_path(id: order_product.id), method: :patch, local: true do |f| %>
+        <%= f.number_field :quantily, value: order_product.quantily,
+          max: order_product.quantily + order_product.product.quantily,
+          min: Settings.min_quantily, class: "form-control" %>
+    </td>
+    <td class="col-sm-1 col-md-1 text-center">
+      <strong><%= number_to_currency order_product.price, locale: :en %></strong>
+    </td>
+    <td>
+      <%= f.button type: :submit, class: "btn btn-info" do %>
+        <% content_tag(:span, nil, class: "glyphicon glyphicon-refresh") %>
+      <% end %>
+      <% end %>
+      <%= link_to order_detail_path(order_product.id), method: :delete, data: {confirm: "Xóa?"} do %>
+        <button type="button" class="btn btn-danger">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
+      <% end %>
+    </td>
+  <% else %>
+    <td class="col-sm-1 col-md-1" style="text-align: center">
+         <strong><%= order_product.quantily %></strong>
+    </td>
+    <td class="col-sm-1 col-md-1 text-center">
+      <strong><%= number_to_currency order_product.price, locale: :en %></strong>
+    </td>
+  <% end %>
 </tr>

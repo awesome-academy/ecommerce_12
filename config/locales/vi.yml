@@ -46,6 +46,15 @@ vi:
       nav_about: "Giới thiệu"
       nav_contact: "Kết nối"
     application:
+  order_details:
+    update:
+      danger_detail: "Sản phẩm không tồn tại trong đơn hàng!"
+    destroy:
+      success_destroy: "Xóa sản phẩm thành công!"
+      danger_detail: "Sản phẩm không tồn tại trong đơn hàng!"
+    success_update: "Cập nhật thành công!"
+    danger_update: "Cập nhật không thành công!"
+    danger_qty: "Tối đa %{max}, tối thiểu %{min} sản phẩm!"
   orders:
     order:
       detail_textlink: "Chi tiết"

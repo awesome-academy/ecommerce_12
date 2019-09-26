@@ -46,6 +46,15 @@ en:
       nav_about: "About"
       nav_contact: "Contact"
     application:
+  order_details:
+    update:
+      danger_detail: "Product does not exist in the order!"
+    destroy:
+      success_destroy: "Successfully deleted the product!"
+      danger_detail: "Product does not exist in the order!"
+    success_update: "Update successful!"
+    danger_update: "Update Failed!"
+    danger_qty: "Max: %{max}, Min: %{min} sản phẩm!"
   orders:
     order:
       detail_textlink: "Detail"

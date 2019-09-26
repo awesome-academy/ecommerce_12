@@ -21,8 +21,8 @@ class OrdersController < ApplicationController
           @order.save
           add_order_items
           flash[:success] = t ".success_checkout"
-          redirect_to root_path
           clear_carts
+          redirect_to @order
         end
       rescue StandardError
         flash[:danger] = t ".danger_checkout"
