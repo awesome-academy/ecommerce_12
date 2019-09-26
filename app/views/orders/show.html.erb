@@ -7,6 +7,9 @@
             <th><%= t ".product_th" %></th>
             <th class="text-center"><%= t ".quantity_th" %></th>
             <th class="text-center"><%= t ".price_th" %></th>
+            <% if @order.pending? %>
+              <th></th>
+            <% end %>
           </tr>
         </thead>
 
@@ -36,9 +39,15 @@
                 </strong>
               </h3>
             </td>
+            <% if @order.pending? %>
+              <td></td>
+            <% end %>
           </tr>
           <tr>
             <td></td>
+            <% if @order.pending? %>
+              <td></td>
+            <% end %>
             <td>
               <%= link_to orders_path do %>
                 <button type="button" class="btn btn-default">

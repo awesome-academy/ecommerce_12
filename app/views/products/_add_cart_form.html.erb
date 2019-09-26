@@ -1,4 +1,4 @@
-<%= form_with url: carts_path(id: @product.id), method: :post do |f| %>
+<%= form_with url: carts_path(id: @product.id), method: :post, local: true do |f| %>
   <div class="input-group">
     <%= f.label :quantily, class: "input-group-addon" %>
     <%= f.number_field :quantily, value: Settings.default_quantily,
